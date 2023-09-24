@@ -6,8 +6,8 @@ fun testaCopiasEReferencias() {
     println("NumeroX $numeroX")
     println("NumeroY $numeroY")
 
-    val contaJoao = ContaBancaria(titular = "Joao", numero = 1002) //cada conta deve ter seu objeto, por ser um espaço separado na memoria ou seja uma referencia
-    var contaMaria = ContaBancaria(titular = "Maria", numero = 1002)
+    val contaJoao = ContaCorrente(titular = "Joao", numero = 1002) //cada conta deve ter seu objeto, por ser um espaço separado na memoria ou seja uma referencia
+    var contaMaria = ContaPoupanca(titular = "Maria", numero = 1002)
 
 
 

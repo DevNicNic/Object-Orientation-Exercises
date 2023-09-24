@@ -1,7 +1,7 @@
 fun testaFuncionarios() {
-    println("Bem vindo ao Bytebank!!")
 
-    val alex = Funcionario(
+
+    val alex = Analista(
         nome1 = "Alex",
         cpf = "111.111.111-1",
         salario = 1000.0

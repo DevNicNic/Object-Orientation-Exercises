@@ -6,10 +6,17 @@ class Arqueiro(
     vida = vida
 ) {
     override fun atacar(alvo: Personagem) {
-        super.atacar(alvo)
+        println("$nomePersonagem realiza um ataque de Arco e Flechas contra ${alvo.nomePersonagem}")
     }
 
     override fun defender() {
-        super.defender()
+        println("$nomePersonagem se defende com seu seu escudo mágico.")
+    }
+
+    fun danos() {
+        val dano = 11
+        val danoLevado = vida - dano
+        println("$nomePersonagem sofreu dano ${dano}, e ficou com ${danoLevado} vidas. ")
+
     }
 }

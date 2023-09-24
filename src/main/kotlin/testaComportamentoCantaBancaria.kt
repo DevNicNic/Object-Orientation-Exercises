@@ -1,12 +1,12 @@
 fun testaComportamentoCantaBancaria() {
-    val contaAlex = ContaBancaria(titular = "Alex", numero = 1000)
+    val contaAlex = ContaCorrente(titular = "Alex", numero = 1000)
     contaAlex.deposita(200.0)
     println(contaAlex.titular)
     println(contaAlex.numero)
     println(contaAlex.saldo)
 
     println()
-    val contaFran = ContaBancaria(titular = "Fran", numero = 1001)
+    val contaFran = ContaPoupanca(titular = "Fran", numero = 1001)
     contaFran.deposita(300.0)
     println(contaFran.titular)
     println(contaFran.numero)
