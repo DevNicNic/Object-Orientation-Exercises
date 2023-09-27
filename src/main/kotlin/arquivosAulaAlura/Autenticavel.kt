@@ -2,5 +2,14 @@ package arquivosAulaAlura
 
 interface Autenticavel {
 
-     fun autentica (senha: Int): Boolean
+     val senha: Int
+
+     fun autentica(senha: Int): Boolean {
+          println("AutenticaInterface")
+          if (this.senha == senha) {
+               return true
+          }
+          return false
+
+     }
 }
