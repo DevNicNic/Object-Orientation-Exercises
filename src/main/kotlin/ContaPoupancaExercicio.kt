@@ -3,7 +3,11 @@ class ContaPoupancaExercicio(
 ) : ContaBancariaExercicio(saldoExercicio = saldoExercicio) {
 
     override fun depositarExercicio(valor: Double) {
-        super.depositarExercicio(valor)
+        if (valor > 0) {
+            this.saldoExercicio += valor
+            println("Deposito bem sucedido!")
+        }
+
     }
 
     override fun sacarExercicio(valor: Double) {

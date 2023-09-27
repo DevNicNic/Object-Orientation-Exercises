@@ -1,5 +1,5 @@
 fun main() {
-    val saldoExercicio  = ContaBancariaExercicio(
+    val saldoExercicio  = ContaCorrenteExercicio(
         saldoExercicio = 1000.0
     )
     println("Saldo:R$ ${saldoExercicio.saldoExercicio}")
