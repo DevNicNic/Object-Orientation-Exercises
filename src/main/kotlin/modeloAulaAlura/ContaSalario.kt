@@ -1,10 +1,9 @@
-package arquivosAulaAlura
+package modeloAulaAlura
 
-import ContaBancaria
 
-class ContaPoupanca(
+class ContaSalario(
     titular: String,
-    numero: Int
+    numero: Int,
 ) : ContaBancaria(
     titular = titular,
     numero = numero
@@ -12,8 +11,6 @@ class ContaPoupanca(
     override fun saca(valor: Double) {
         if (this.saldo >= valor) {
             this.saldo -= valor
-
-
         }
     }
 }

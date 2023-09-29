@@ -1,4 +1,9 @@
-package arquivosAulaAlura
+package testeAulaAlura
+
+import modeloAulaAlura.Cliente
+import modeloAulaAlura.Diretor
+import modeloAulaAlura.Gerente
+import modeloAulaAlura.SistemaInterno
 
 fun testaAutenticacao() {
     val gerente = Gerente(
@@ -15,7 +20,7 @@ fun testaAutenticacao() {
         plr = 200.0
     )
 
-    val cliente = Cliente (
+    val cliente = Cliente(
         nome = "Gui",
         cpf = "333.333.333-33",
         senha = 1234

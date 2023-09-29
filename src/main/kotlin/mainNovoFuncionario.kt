@@ -3,7 +3,7 @@ fun main() {
         nomeFuncionario = "Nicole",
         salarioFuncionario = 5000.0
     )
-    println("Nome do arquivosAulaAlura.Gerente: ${novoGerente.nomeFuncionario}")
+    println("Nome do modeloAulaAlura.Gerente: ${novoGerente.nomeFuncionario}")
     println("Salário sem bonificação: ${novoGerente.salarioFuncionario}")
     novoGerente.calcularNovaBonificacao()
     println("Total salário com bonificação: ${novoGerente.salarioFuncionario}")

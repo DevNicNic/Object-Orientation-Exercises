@@ -1,3 +1,5 @@
+package modeloAulaAlura
+
 //contrutor primario é o mais bem vindo
 abstract class ContaBancaria(
     var titular: String,
@@ -24,14 +26,7 @@ abstract class ContaBancaria(
     abstract fun saca(valor: Double)
 
 
-    fun transfere(valor: Double, destino: ContaBancaria): Boolean {
-        if (this.saldo >= valor) {
-            this.saldo -= valor
-            destino.deposita(valor)
-            return true
-        }
-        return false
-    }
+
 //    fun getSaldo (): Double {
 //        return saldo
 //    }

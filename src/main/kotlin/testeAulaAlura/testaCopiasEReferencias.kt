@@ -1,7 +1,7 @@
-package arquivosAulaAlura
+package testeAulaAlura
 
-import arquivosAulaAlura.ContaCorrente
-import arquivosAulaAlura.ContaPoupanca
+import modeloAulaAlura.ContaCorrente
+import modeloAulaAlura.ContaPoupanca
 
 fun testaCopiasEReferencias() {
     val numeroX = 10

@@ -1,9 +1,9 @@
-package arquivosAulaAlura
+package testeAulaAlura
 
-import arquivosAulaAlura.Analista
-import arquivosAulaAlura.CalculadoraBonificacao
-import arquivosAulaAlura.Diretor
-import arquivosAulaAlura.Gerente
+import modeloAulaAlura.Analista
+import modeloAulaAlura.CalculadoraBonificacao
+import modeloAulaAlura.Diretor
+import modeloAulaAlura.Gerente
 
 fun testaFuncionarios() {
 

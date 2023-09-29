@@ -1,11 +1,9 @@
-package arquivosAulaAlura
-
-import ContaBancaria
+package modeloAulaAlura
 
 class ContaCorrente(
     titular: String,
     numero: Int
-) : ContaBancaria(
+) : ContaTransferivel(
     titular = titular,
     numero = numero
 ) {

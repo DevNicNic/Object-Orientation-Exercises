@@ -1,6 +1,6 @@
-package arquivosAulaAlura
+package modeloAulaAlura
 
-class Auxiliar(
+class Analista(
     nome1: String,
     cpf: String,
     salario: Double,
@@ -12,7 +12,7 @@ class Auxiliar(
     salario = salario
 ){
     override fun bonificacao(): Double {
-        return salario * 0.05
+        return  salario * 0.1
     }
 
 

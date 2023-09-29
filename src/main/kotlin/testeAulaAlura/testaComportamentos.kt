@@ -1,3 +1,8 @@
+package testeAulaAlura
+
+import Conta
+import deposita
+
 fun testaComportamentos() {
     val contaAlex = Conta()
     contaAlex.titular = "Alex"

@@ -1,4 +1,4 @@
-package arquivosAulaAlura
+package modeloAulaAlura
 
 class Diretor(
     nome1: String,
@@ -12,14 +12,12 @@ class Diretor(
     cpf = cpf,
     salario = salario,
     senha = senha
-), Autenticavel {
+) {
     override fun bonificacao(): Double {
         return  salario + plr
     }
 
-    override fun autentica(senha: Int): Boolean {
-        return super<FuncionarioAdmin>.autentica(senha)
-    }
+
 
 
 }

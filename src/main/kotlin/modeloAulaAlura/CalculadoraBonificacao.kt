@@ -1,4 +1,4 @@
-package arquivosAulaAlura
+package modeloAulaAlura
 
 class CalculadoraBonificacao {
     var total : Double = 0.0

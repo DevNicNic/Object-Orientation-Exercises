@@ -1,4 +1,4 @@
-package arquivosAulaAlura
+package modeloAulaAlura
 
 abstract class Funcionario(
     val nome1: String,

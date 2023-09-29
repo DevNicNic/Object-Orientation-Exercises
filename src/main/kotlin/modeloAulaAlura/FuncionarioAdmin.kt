@@ -1,18 +1,17 @@
-package arquivosAulaAlura
+package modeloAulaAlura
 
 abstract class FuncionarioAdmin(
     nome1: String,
     cpf: String,
     salario: Double,
-    val senha: Int
+    protected val senha: Int
 
 ) : Funcionario(
     nome1 = nome1,
     cpf = cpf,
     salario = salario
-) {
-     open fun autentica(senha: Int): Boolean {
-         println("FuncionarioAdmim")
+), Autenticavel {
+    override fun autentica(senha: Int): Boolean {
         if (this.senha == senha) {
             return true
         }

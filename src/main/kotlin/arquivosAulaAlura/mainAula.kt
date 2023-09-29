@@ -1,7 +1,14 @@
 package arquivosAulaAlura
 
+import testeAulaAlura.testaContasDiferentes
+
 fun main() {
-    testaAutenticacao()
+
+testaContasDiferentes()
+
+
+
+
 
 
 }

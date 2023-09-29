@@ -1,8 +1,10 @@
-package arquivosAulaAlura
+package modeloAulaAlura
+
+import modeloAulaAlura.Autenticavel
 
 class SistemaInterno {
 
-    fun entra (admin: Autenticavel , senha: Int, ){
+    fun entra (admin: Autenticavel, senha: Int, ){
        if (admin.autentica(senha)){
            println("Bem vindo ao Bytebank!")
        } else {

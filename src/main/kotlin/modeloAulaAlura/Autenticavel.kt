@@ -1,0 +1,8 @@
+package modeloAulaAlura
+
+interface Autenticavel {
+
+     fun autentica(senha: Int): Boolean
+
+
+}
