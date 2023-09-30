@@ -1,18 +1,23 @@
 package com.devnic.nicole.bytebank.testeAulaAlura
 
-import com.devnic.nicole.bytebank.modeloAulaAlura.Cliente
-import com.devnic.nicole.bytebank.modeloAulaAlura.ContaCorrente
-import com.devnic.nicole.bytebank.modeloAulaAlura.ContaPoupanca
-import com.devnic.nicole.bytebank.modeloAulaAlura.ContaSalario
+import com.devnic.nicole.bytebank.modeloAulaAlura.*
 
 fun testaContasDiferentes() {
     val contaCorrente = ContaCorrente(
-        titular = Cliente(nome = "Alex", cpf = "555.555.555-55", senha= 5),
+        titular = Cliente(
+            nome = "Alex",
+            cpf = "555.555.555-55",
+            senha = 5,
+            endereco = Endereco(
+                logradouro = "Rua: João Assis de Castro")
+        ),
         numero = 1000
     )
     println("Titular")
     println("Nome do Titular ${contaCorrente.titular.nome}")
     println("Cpf do titular ${contaCorrente.titular.cpf}")
+    println("Endereço Titular: ${contaCorrente.titular.endereco.logradouro}")
+    println()
 
     val contaPoupanca = ContaPoupanca(
         titular = Cliente(nome = "Fran", cpf = "777.777.777-7", senha = 7),
