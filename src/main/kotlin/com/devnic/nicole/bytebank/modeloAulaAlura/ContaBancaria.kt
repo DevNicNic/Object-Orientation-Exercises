@@ -1,5 +1,6 @@
 package com.devnic.nicole.bytebank.modeloAulaAlura
 
+
 //contrutor primario é o mais bem vindo
 abstract class ContaBancaria(
     var titular: Cliente,
@@ -8,6 +9,18 @@ abstract class ContaBancaria(
 ) {
     var saldo = 0.0
         protected set
+
+    companion object Contador {
+        var total = 0
+            private set
+
+
+    }
+
+    init {
+        println("Criando Conta")
+        Contador.total++
+    }
 
 
 //    constructor(titular: String, numero: Int){ // construtor secundario
@@ -26,7 +39,6 @@ abstract class ContaBancaria(
     abstract fun saca(valor: Double)
 
 
-
 //    fun getSaldo (): Double {
 //        return saldo
 //    }
@@ -37,4 +49,40 @@ abstract class ContaBancaria(
 //
 //
 //    }
+}
+
+class ContaCorrente(
+    titular: Cliente,
+    numero: Int
+) : ContaTransferivel(
+    titular = titular,
+    numero = numero
+) {
+
+
+    override fun saca(valor: Double) {
+        val valorComTaxa = valor + 0.1
+        if (this.saldo >= valorComTaxa) {
+            this.saldo -= valorComTaxa
+
+        }
+    }
+}
+
+class ContaPoupanca(
+    titular: Cliente,
+    numero: Int
+) : ContaTransferivel(
+    titular = titular,
+    numero = numero
+) {
+
+
+    override fun saca(valor: Double) {
+        if (this.saldo >= valor) {
+            this.saldo -= valor
+
+
+        }
+    }
 }
