@@ -5,6 +5,7 @@ class CalculadoraBonificacao {
         private set
 
     fun registra( funcionario: Funcionario){
+        if (funcionario is Funcionario)
         this.total += funcionario.bonificacao()
     }
 
