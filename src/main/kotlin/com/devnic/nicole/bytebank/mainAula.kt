@@ -9,19 +9,23 @@ import java.util.Objects
 fun main() {
 
 
-    val endereco = Endereco()
+    val endereco = Endereco(logradouro = "Rua Henrique Scheveng", numeroEndereco = 1000)
+    val enderecoNovo = Endereco(bairro = "Jardim Vitória", complemento = "Eu sou demais")
 
-    val objeto : Any = Any()
+    println(endereco.equals(endereco))
+
+    println(endereco.hashCode())
+    println(enderecoNovo.hashCode())
+
+    println(endereco)
+    println(enderecoNovo)
+
+    println("${endereco.javaClass}@${
+        Integer.toHexString(endereco.hashCode())}")
 
 
-    imprime(objeto)
 
-    imprime(1)
-    imprime(1.0)
-    val teste: Any = imprime(endereco)
-    println(teste)
 
-    testaFuncionarios()
 
 }
 

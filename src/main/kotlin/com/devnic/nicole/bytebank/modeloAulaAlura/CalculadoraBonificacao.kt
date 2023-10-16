@@ -4,8 +4,7 @@ class CalculadoraBonificacao {
     var total : Double = 0.0
         private set
 
-    fun registra( funcionario: Any){
-        if (funcionario is Funcionario)
+    fun registra( funcionario: Funcionario){
         this.total += funcionario.bonificacao()
     }
 
