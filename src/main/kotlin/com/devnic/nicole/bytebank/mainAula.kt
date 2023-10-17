@@ -9,10 +9,19 @@ import java.util.Objects
 fun main() {
 
 
-    val endereco = Endereco(logradouro = "Rua Henrique Scheveng", numeroEndereco = 1000)
-    val enderecoNovo = Endereco(bairro = "Jardim Vitória", complemento = "Eu sou demais")
+    val endereco = Endereco(
+        bairro = "Jardim Vitória",
+        complemento = "Eu sou demais",
+        cep = "00000-020"
 
-    println(endereco.equals(endereco))
+    )
+    val enderecoNovo = Endereco(
+        bairro = "Jardim Vitória",
+        complemento = "Eu sou demais",
+        cep = "00000-020"
+    )
+
+    println(endereco.equals(enderecoNovo))
 
     println(endereco.hashCode())
     println(enderecoNovo.hashCode())
