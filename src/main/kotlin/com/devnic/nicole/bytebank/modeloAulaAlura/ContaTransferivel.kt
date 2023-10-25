@@ -1,5 +1,7 @@
 package com.devnic.nicole.bytebank.modeloAulaAlura
 
+import com.devnic.nicole.bytebank.exception.SaldoInsuficienteException
+
 
 abstract class ContaTransferivel(
     titular: Cliente,
@@ -7,15 +9,16 @@ abstract class ContaTransferivel(
 ) : ContaBancaria(
     titular = titular,
     numero = numero
-){
+) {
 
-     fun transfere(valor: Double, destino: ContaBancaria): Boolean {
-        if (saldo >= valor) {
-            saldo -= valor
-            destino.deposita(valor)
-            return true
+    fun transfere(valor: Double, destino: ContaBancaria) {
+        if (saldo < valor) {
+            throw SaldoInsuficienteException()
         }
-        return false
+        saldo -= valor
+        destino.deposita(valor)
+
+
     }
 
 }

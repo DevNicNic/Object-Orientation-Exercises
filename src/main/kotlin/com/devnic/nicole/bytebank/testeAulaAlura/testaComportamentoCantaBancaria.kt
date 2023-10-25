@@ -1,11 +1,12 @@
 package com.devnic.nicole.bytebank.testeAulaAlura
 
+import com.devnic.nicole.bytebank.exception.SaldoInsuficienteException
 import com.devnic.nicole.bytebank.modeloAulaAlura.Cliente
 import com.devnic.nicole.bytebank.modeloAulaAlura.ContaCorrente
 import com.devnic.nicole.bytebank.modeloAulaAlura.ContaPoupanca
 
 fun testaComportamentoCantaBancaria() {
-    val alex = Cliente (nome = "Alex", cpf = "111.111.111-11", senha = 1 )
+    val alex = Cliente(nome = "Alex", cpf = "111.111.111-11", senha = 1)
     val contaAlex = ContaCorrente(titular = alex, numero = 1000)
     contaAlex.deposita(200.0)
     println(contaAlex.titular)
@@ -13,7 +14,7 @@ fun testaComportamentoCantaBancaria() {
     println(contaAlex.saldo)
 
     println()
-    val fran = Cliente (nome = "Fran", cpf = "222.222.222-22", senha = 2)
+    val fran = Cliente(nome = "Fran", cpf = "222.222.222-22", senha = 2)
     val contaFran = ContaPoupanca(titular = fran, numero = 1001)
     contaFran.deposita(300.0)
     println(contaFran.titular)
@@ -49,11 +50,15 @@ fun testaComportamentoCantaBancaria() {
     println()
     println("Transferência da conta da Fran para o Alex")
 
-    if (contaFran.transfere(100.0, contaAlex)) {
+    try {
+        contaFran.transfere(valor = 100.0, destino = contaAlex)
         println("Transferência sucedida")
-    } else {
+    } catch (e: SaldoInsuficienteException){
         println("Falha na transferência")
+        println("Saldo Insuficiente")
+        e.printStackTrace()
     }
+
     println(contaAlex.saldo)
     println(contaFran.saldo)
 }
